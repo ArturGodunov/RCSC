@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 				},
 				files: {
-					'dist/styles/style.css': 'src/sass/layout.scss'
+					'dist/styles/styles.css': 'src/sass/layout.scss'
 				}
 			}
 		},
@@ -40,6 +40,15 @@ module.exports = function(grunt) {
 		watch: {
 			options: {
 				livereload: true
+			},
+			html: {
+				files: [
+					'src/jade/**/*.jade'
+				],
+				tasks: ['jade:dist'],
+				options: {
+					spawn: false
+				}
 			},
 			css: {
 				files: [

@@ -7,5 +7,75 @@ html(lang='ru')
 
     body
 
+        aside.aside
+            a.logo(href='/')
+                img.logo_img(src='images/logo.png' alt='RCSC - Российский Совет Торговых Центров')
+            nav.menu
+                ul.menu_list
+                    each val in ['Концепция мероприятия','Конгресс уже рекомендуют','Программа','Профессиональный каталог управляющих ТЦ','Стоимость','Партнёры','Место проведения','Контакты']
+                        li.menu_item= val
+
+        .main
+            header.header
+                img.header_logo(src='images/header_logo.png' alt='RCSC - Российский Совет Торговых Центров')
+                h1.header_title SHOPPING CENTER MANAGER’s Congress
+                h2.header_subtitle Слоган компании
+                .header_date <strong>25-26-27</strong> мая <strong>2016</strong>
+                .header_time
+                    each val in [['05','дней'],['10','часов'],['16','минут'],['23','секунд']]
+                        .header_time_block
+                            .header_time_number= val[0]
+                            .header_time_text= val[1]
+                .btn ПРИНЯТЬ УЧАСТИЕ
+
+            section.about.clr
+                .about_img_block
+                    - for(var i=1; i<5; i++)
+                        img.about_img(src='images/about_' + i +'.jpg')
+                .about_text_block
+                    h4.about_title О МЕРОПРИЯТИИ
+                    .about_term SHOPPING CENTER MANAGER’s Congress 2016 – это:
+                    .about_determ.
+                        Двухдневная конференция по управлению и развитию команды ТЦ
+                        Мастер-классы от управляющих крупнейших зарубежных торговых центров
+                    p.about_text.
+                        Тематические круглые столы по методике формирования качественной
+                        управляющей команды ТЦ Возможность продемонстрировать собственные
+                        профессиональные компетенции на крупнейшем форуме управляющих ТЦ и
+                        обменяться опытом с коллегами из других регионовТематические сессии,
+                        неформальное общение, гала-вечер с развлекательной программой и многое
+                        другое…
+                    p.about_text.
+                        Начиная с 2016 года, SHOPPING CENTER MANAGER’s Congress будет проходить
+                        ежегодно.
+
+            section.determination
+                .determination_text.
+                    <strong>SHOPPING CENTER MANAGER’s Congress</strong> – профессиональная платформа для управляющих торговыми
+                    центрами (ТЦ/ТРЦ/ТРК) по вопросам персонального развития, формирования команды, эксплуатации и
+                    технического обслуживания объекта, функционирования и развития ТЦ на всех этапах его жизни.
+
+            section.speakers
+                h3.speakers_title Конгресс уже рекомендуют
+                ul.speakers_list_img.clr
+                    - for(var i=1; i<6; i++)
+                        li.speakers_item_img(class= i == 3 ? 'active' : '')
+                            img.speakers_img(src='images/congress_' + i +'.png')
+                            .speakers_sign Тарас Табаков
+                ul.speakers_list_text
+                    - for(var i=1; i<6; i++)
+                        li.speakers_item_text
+                            .speakers_name Тарас Табаков
+                            .speakers_post Управляющий ТРЦ «Радуга Парк»
+                            .speakers_text.
+                                «Формат единого Конгресса для Управляющих Торговыми центрами безусловно актуален и необходим!
+                                Ведь на сегодняшний момент нет методики управления, которую можно одинаково успешно использовать для любого
+                                торгового центра. Именно поэтому основная задача мероприятия «Shopping Center Manager’s Congress» – создать
+                                платформу, где можно будет обмениваться знаниями и систематизировать накопленный опыт. И если в
+                                дальнейшем наша или другая управляющая компания сможет применить полученные знания на практике и
+                                оптимизировать работу своего ТЦ, – значит задача конгресса выполнена».
+
+
+
 
         include includes/blocks/scripts

@@ -1,0 +1,63 @@
+/*
+** HEADER
+*/
+.header{
+  text-align: center;
+  background: url("../images/bg/bg_header.jpg")no-repeat 50%;
+  background-size: cover;
+  padding: 130px 0 110px;
+  color: #fff;
+}
+
+.header_logo{
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 50px;
+}
+
+.header_title{
+  font-size: 60px;
+  font-family: proximanova_light,sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 0.6em;
+}
+
+.header_subtitle{
+  font-size: 36px;
+  font-family: proximanova_bold, sans-serif;
+  margin: 0 0 1.3em;
+}
+
+.header_date{
+  font-size: 40px;
+  font-family: proximanova_light,sans-serif;
+  margin: 0 0 0.7em;
+  strong{
+    font-family: proximanova_bold, sans-serif;
+  }
+}
+
+.header_time{
+  margin: 0 0 40px;
+}
+
+.header_time_block{
+  display: inline-block;
+  padding: 10px 50px;
+  & + .header_time_block{
+    border-left: 1px dotted #fff;
+  }
+}
+
+.header_time_number{
+  font-size: 60px;
+  font-family: proximanova_bold, sans-serif;
+}
+
+.header_time_text{
+  font-size: 16px;
+  font-family: proximanova_semibold, sans-serif;
+}
+/*
+** END HEADER
+*/
