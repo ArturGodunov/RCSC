@@ -1,0 +1,69 @@
+block rules
+   section.rules.col-6
+      .head.head__dark.head__rules.clr
+         .wrapper.wrapper__half_left
+            each val in [['rule','Status/Number'],['name','Rule tittle/Creator'],['date','Modified'],['actions','View']]
+               .rules_col
+                  .head_text.head_text__title= val[0]
+                  .head_text.head_text__subtitle= val[1]
+      .rules_body
+         - for (var i=0; i < 10; i++)
+            .body_row.body_row__rules
+               .wrapper.wrapper__half_left
+                  .rules_button.button_activation(class= i == 0 ? 'active' : '')
+                     .rules_col
+                        .rules_body_text.rules_body_text__number 1
+                     .rules_col
+                        .rules_body_text.rules_body_text__title Best Profit
+                        .rules_body_text Patrick Black
+                     .rules_col
+                        .rules_body_text 6/18/2015
+                        .rules_body_text 12:01:10 PM
+                     .rules_col
+                        .rules_review
+
+   section.rules_description.col-6(data-prevent-scroll)
+      .wrapper.wrapper__half_right.clr
+         h2.rules_title Rule #1
+         .button.button__small.button__yellow.button__edit(data-slide-open='1' title='Edit') Edit
+         .button.button__small.button__red.button__delete.m-l-sm(title='Delete') Delete
+
+         h5.rules_subtitle Rule Name
+         .rules_name Best Profit
+         .right
+            .rules_status Active<br>Status
+            button.button.button__small.button__yellow.m-r-n-inlblc(title='On') on
+            button.button.button__small.button__grey.button__disabled(title='Off') off
+
+         h5.rules_subtitle Creator Name
+         .rules_creator Patrick Blacknight
+         .right patrickblacknight@gmail.com
+
+         h5.rules_subtitle Description
+         .rules_description_text.
+            Description text description text description text description text description text description
+            text ext description text description text description text description text description text
+            ext description text description text description text description text description text
+            description text description text description text description text description text description
+            text description text
+
+         h5.rules_subtitle.text-upper Payment Processors
+         .rules_payment_wrap
+            .clr
+               .rules_payment.rules_payment__available
+                  .rules_payment_title.rules_payment_title__orange Available
+                  ul.rules_payment_list(data-scroll)
+                     - for (var i=0; i < 12; i++)
+                        li.rules_payment_item.tick.button_activation Authorize.net
+               .rules_payment_arrow.rules_payment_arrow__right
+               .rules_payment_arrow.rules_payment_arrow__left
+               .rules_payment.rules_payment__assigned
+                  .rules_payment_title.rules_payment_title__orange Assigned
+                  ul.rules_payment_list.rules_payment_list__numeric(data-scroll)
+                     - for (var i=0; i < 13; i++)
+                        li.rules_payment_item.button_activation(class= i == 0 ? 'active' : '') Authorize.net
+                           .arrow.arrow__up
+                           .arrow.arrow__down
+            .text-right.m-t.m-b
+               button.button.button__middle.button__transparent(title='Cancel') cancel
+               button.button.button__middle.button__yellow.m-l-xs(title='Safe') safe

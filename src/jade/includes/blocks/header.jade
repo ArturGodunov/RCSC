@@ -1,0 +1,13 @@
+block header
+    header.header.clr
+        .wrapper
+            a.logo_link(href='/' title='Unified Payment Gateway')
+                img.logo(src='images/black_logo__small.svg' alt='Unified Payment Gateway')
+            .header_top
+                .greeting Hello, <a class="greeting_name" href="#" title="Admin">Admin</a>!
+                a.log_off(href='index1.html' title='Log off') Log off
+            nav.menu
+                ul.menu_list
+                    each val, i in ['Rules','Processors','Transactions','Reports','Logs','Users','Configuration','License']
+                        li.menu_item
+                            a.menu_link(class= i == 0 ? 'active' : '')(href='/' title=val)= val

@@ -1,0 +1,53 @@
+extends index0
+
+block main
+
+    block panel_top_configuration
+        section.panel_top.panel_top__bottom_md
+            .wrapper
+                h2.panel_title.panel_title__dark PAYPAL
+                .row.m-t
+                    .col-2
+                        +selectSuper('Transaction Type', 'Sandbox')
+                    .col-2
+                        +selectSuper('Test Credit Card', 'Gateway')
+                    .col-2
+                        +labelInput(1, 'Transaction Amount', '25.00')
+
+    block configuration
+        section.main_content
+
+            .wrapper
+                .row.m-t-lg
+                    .col-2
+                        +labelInput(2, 'First Name', '')
+                    .col-2
+                        +labelInput(3, 'First Name', '')
+                    .col-2
+                        +labelInput(4, 'Country', '')
+                    .col-2
+                        +labelInput(5, 'Street Address1', '')
+                .row.m-t
+                    .col-2
+                        +labelInput(6, 'Last Name', '')
+                    .col-2
+                        +selectSuper('Expiration Month', 'Expiration Month', false)
+                    .col-2
+                        +selectSuper('State', 'State', false)
+                    .col-2
+                        +labelInput(7, 'Street Address2', '')
+                .row.m-t
+                    .col-2.col-offset-2
+                        +selectSuper('Expiration Year', 'Expiration Year', false)
+                    .col-2
+                        +labelInput(8, 'Zip Code', '')
+                    .col-2
+                        +labelInput(9, 'City', '')
+                .row.m-t
+                    .col-2.col-offset-2
+                        +labelInput(10, 'CVV Number', '')
+
+            .row-white
+                .wrapper
+                    button.button.button__middle.button__transparent(title='Cancel') cancel
+                    button.button.button__middle.button__grey.m-l-xs(title='Process') Process

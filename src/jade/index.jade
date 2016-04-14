@@ -1,0 +1,44 @@
+extends index0
+
+block head
+    head
+        include includes/blocks/head
+
+        style.
+            body { padding-top: 20px; }
+            a { color: #ffb600; line-height: 2;}
+            a:hover { text-decoration: none; }
+
+block body
+    body
+        .wrapper
+            div: a(href='index1.html') Login
+            div: a(href='index2.html') Forgot password
+            div: a(href='index3.html') Rules
+            div: a(href='index4.html') System configuration
+            div: a(href='index5.html') Error log
+            div: a(href='index6.html') Transactions
+            div: a(href='index7.html') Transaction Summary Report
+            div: a(href='index8.html') Users
+            div: a(href='index9.html') License
+            div: a(href='index10.html') Paypal
+            div: a(href='index11.html') Available Processors
+
+            div.m-t-md: a(data-popup-welcome href) Popup Welcome
+            div: a(data-popup-small href) Popup Transaction Details
+            div: a(data-popup-big href) Popup Processor Details
+
+        include includes/blocks/scripts
+
+        script.
+            $('[data-popup-welcome]').colorbox({
+                href:'popup1.html',
+                opacity: 1,
+                arrowKey: false,
+                closeButton: false,
+                onComplete: function(){
+                    setTimeout(function() {
+                        $.colorbox.close();
+                    }, 1500)
+                }
+            });

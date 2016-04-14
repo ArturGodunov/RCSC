@@ -1,0 +1,77 @@
+extends index0
+
+block main
+
+    block panel_top_configuration
+        section.panel_top.panel_top__bottom_md
+            .wrapper.clr
+                h2.panel_title.panel_title__dark Users
+                .right
+                    button.button.button__big.button__grey(title='Create new user') create new user
+
+    block transactions
+        section.main_content.main_content__small
+
+            section.slider_content.slider_content__users
+                .head.head__light
+                    .wrapper
+                        each val in [['User','Title'],['Email','Title'],['role(s)','Status'],['Actions','Type']]
+                            .slider_col
+                                .head_text.head_text__title= val[0]
+                                .head_text.head_text__subtitle= val[1]
+                .slider_body
+                    form
+                        - for (var i=0; i < 3; i++)
+                            .body_row.body_row__padding_sm.body_row__error
+                                .wrapper
+                                    .slider_col
+                                        .table_text.text-upper admin
+                                    .slider_col
+                                        .table_text mreutov@gmail.com
+                                    .slider_col
+                                        .table_text.text-upper System
+                                    .slider_col
+                                        a.table_text.table_text__inline_link(href='' data-slide-open='1' title='Edit') Edit
+                                        if (i != 0)
+                                            a.table_text.table_text__inline_link(href='' title='Delete') Delete
+
+    block slider_3
+        section.slider.slider__small(data-slide='1' data-prevent-scroll)
+            .slider_close.button_activation(data-slide-close title='Close')
+
+            section.rules_description.rules_description__slider
+                .wrapper.wrapper__half_right.clr
+                    h2.rules_title.rules_title__user User
+                    .button.button__small.button__grey.button__edit(title='Edit') Edit
+                    .button.button__small.button__red.button__delete.m-l-sm(title='Delete') Delete
+
+                    h5.rules_subtitle User Settings
+                    .row.m-t-lg
+                        .col-4
+                            +labelInput(1, 'User Login', '')
+                        .col-4
+                            +labelInput(2, 'Email Address', '')
+                    .row.m-t
+                        .col-4
+                            +labelInput(3, 'Password', '')
+                        .col-4
+                            +labelInput(4, 'Confirm Password', '')
+
+                    h5.rules_subtitle.text-upper Roles
+                    .rules_payment_wrap.rules_payment_wrap__small
+                        .clr
+                            .rules_payment.rules_payment__available
+                                .rules_payment_title.rules_payment_title__gray Avalible Roles
+                                ul.rules_payment_list(data-scroll)
+                                    - for (var i=0; i < 12; i++)
+                                        li.rules_payment_item.button_activation User#{i}
+                            .rules_payment_arrow.rules_payment_arrow__right
+                            .rules_payment_arrow.rules_payment_arrow__left
+                            .rules_payment.rules_payment__assigned
+                                .rules_payment_title.rules_payment_title__gray Assigned roles
+                                ul.rules_payment_list(data-scroll)
+                                    - for (var i=0; i < 13; i++)
+                                        li.rules_payment_item.button_activation User#{i}
+                        .text-right.m-t.m-b
+                            button.button.button__middle.button__transparent(title='Cancel') cancel
+                            button.button.button__middle.button__grey.m-l-xs(title='Safe') safe

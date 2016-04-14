@@ -1,0 +1,17 @@
+include includes/vars
+include includes/mixins
+
+doctype html
+html(lang='en')
+    block head
+        head
+            include includes/blocks/head
+
+    block body
+        body.footer(data-welcome)
+
+            include includes/blocks/header
+
+            block main
+
+            include includes/blocks/scripts

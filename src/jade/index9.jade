@@ -1,0 +1,24 @@
+extends index0
+
+block main
+
+    block panel_top_configuration
+        section.panel_top.panel_top__bottom_bg
+            .wrapper
+                h2.panel_title.panel_title__dark LICENSE
+                .row.m-t
+                    .col-2
+                        +labelInput(1, 'Company Name', 'Perfectosoft, LLC')
+                    .col-2
+                        +labelInput(2, 'Issue Date', '7/7/2015  01:39:16PM')
+                .row.m-t
+                    .col-2
+                        +labelInput(3, 'Product Version', '1.0.0.1')
+                    .col-2
+                        +labelInput(4, 'Expiration Date', '8/6/2015  01:39:16PM')
+
+    block transactions
+        section.main_content.main_content__gray.main_content__empty
+            .row-white
+                .wrapper
+                    button.button.button__middle.button__grey(title='Renew license') RENEW License

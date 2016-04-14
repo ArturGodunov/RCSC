@@ -1,0 +1,33 @@
+extends index0
+
+block body
+    body
+
+        block main
+            aside.login_aside
+                h2.login_aside_title Login
+                block login_form
+                    form.login_form.clr
+                        .form_text Please enter your log in and password
+                        .form_group.correct
+                            input.form_input.hover(type='text' placeholder='Log in' title='Log in')
+                        .form_group.correct
+                            input.form_input.hover(type='text' placeholder='Password' title='Password')
+                        .form_group.form_group__checkbox
+                            label.checkbox.form_text.hover.hover__checkbox(title='Remember me')
+                                span.checkbox_b
+                                    input.checkbox_check(type='checkbox')
+                                    span.checkbox_img
+                                | Remember me
+                        .form_group
+                            button.form_button.hover(title='Sign in') Sign in
+                        .form_group
+                            a.form_link.form_text(href='index2.html' title='Forgot your password?') Forgot your password
+                img.logo_aside(src='images/logo_black.svg' alt='Unified Payment Gateway')
+            section.login_main
+                img.logo_main(src='images/logo_white.svg' alt='Unified Payment Gateway')
+                h1.login_main_title
+                    | Unified Payment Gateway<br>
+                    span.small Welcome to the UPG! Exclusive solutions your business!
+
+        include includes/blocks/scripts

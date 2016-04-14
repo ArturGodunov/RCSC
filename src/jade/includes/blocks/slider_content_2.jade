@@ -1,0 +1,18 @@
+block slider_content_2
+   section.slider_content
+      .slider_body.slider_body__col
+         form
+            - for (var i=0; i < 4; i++)
+               .col-3(class= i != 0 ? 'double_arrow' : '')
+                  .rules_payment_title.rules_payment_title__gray Approved
+                  ul.rules_payment_list(data-scroll)
+                     - for (var j=0; j < 12; j++)
+                        li.rules_payment_item.rules_payment_item__checkbox.button_activation
+                           label.label.table_text
+                              input.checkbox(type='checkbox')
+                              span.checkbox_img.checkbox_img__small.checkbox_img__light
+                              span.checkbox_label.checkbox_label__simple Insufficient Funds. The card does not have enough funds to cover the transaction.
+            .clr
+            .m-t-lg.text-right
+               button.button.button__middle.button__transparent(title='Cancel') cancel
+               button.button.button__middle.button__grey.m-l-xs(title='Safe') safe

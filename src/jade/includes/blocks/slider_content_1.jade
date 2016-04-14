@@ -1,0 +1,45 @@
+block slider_content_1
+   section.slider_content
+      .head.head__light.head__slider
+         each val in [['#','Title'],['Name','Title'],['Description','Comments'],['Value','Title'],['Value','Default'],['Enrypt','Status'],['Type','Data'],['User','Name'],['Modified','Date/Time']]
+            .slider_col
+               .head_text.head_text__title= val[0]
+               .head_text.head_text__subtitle= val[1]
+      .slider_body
+         form
+            - for (var i=0; i < 7; i++)
+               .body_row.body_row__slider.flex
+                  .slider_col
+                     .table_text 6
+                  .slider_col
+                     .table_text.text-left.
+                        AppDomaim<br>
+                        Request<br>
+                        Reuse<br>
+                        Count
+                  .slider_col
+                     textarea.textarea
+                  .slider_col
+                     input.input.input__table(type='text')
+                     label.label.table_text.m-t-sm.text-left
+                        input.checkbox(type='checkbox')
+                        span.checkbox_img.checkbox_img__small
+                        span.checkbox_label Show
+                  .slider_col
+                     .table_text(data-text-overflow data-tooltip-string title='Perfectosoft\\AddInModel\\Processor#{i}') Perfectosoft\AddInModel\Processor#{i}
+                  .slider_col
+                     label.label
+                        input.checkbox(type='checkbox')
+                        span.checkbox_img
+                  .slider_col
+                     .table_text String
+                  .slider_col
+                     .table_text.text-upper SERVER
+                  .slider_col
+                     .table_text
+                        div 07/08/2015
+                        .text-nowrap.m-t-xs 05:40:43 AM
+            .body_row.body_row__slider
+               .m-t-sm.text-right
+                  button.button.button__middle.button__transparent(title='Cancel') cancel
+                  button.button.button__middle.button__grey.m-l-xs(title='Safe') safe

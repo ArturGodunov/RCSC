@@ -1,0 +1,22 @@
+block slider_panel_2
+   section.panel_top.panel_top__slider.panel_top__long_bg
+      .slider_delete.button_activation(title='Delete') Delete
+
+      form
+         .row
+            .col-2
+               a.panel_subtitle.panel_subtitle__dark.panel_subtitle__link(href='' data-slide-open='1' title='Configuration') configuration
+            .col-2
+               h3.panel_title.panel_title__dark Code Mapping
+         .row.m-t-md
+            .col-2
+               h5.panel_subtitle.panel_subtitle__dark.m-t-lg Authorize.net
+            .col-2
+               +selectSuper('Transaction Status', 'Sandbox')
+            .col-2
+               +labelInput(3, 'Code', '')
+         .row.m-t-sm
+            .right
+               button.button.button__middle.button__grey.button__small_height add
+            .col-offset-2.m-r-xxl
+               +labelInput(4, 'Description', '')

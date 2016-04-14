@@ -1,0 +1,35 @@
+extends index0
+
+block main
+
+    block panel_top_configuration
+        section.panel_top.panel_top__bottom_md
+            .wrapper.clr
+                h2.panel_title.panel_title__dark Available Processors
+
+    block transactions
+        section.main_content.main_content__xs
+
+            section.slider_content.slider_content__users
+                .head.head__light
+                    .wrapper
+                        each val in [['Processor','Name'],['Version','Number'],['Modified','Date'],['User','Name'],['Actions','Status']]
+                            .slider_col
+                                .head_text.head_text__title= val[0]
+                                .head_text.head_text__subtitle= val[1]
+                .slider_body
+                    form
+                        - for (var i=0; i < 6; i++)
+                            .body_row.body_row__padding_sm.body_row__error
+                                .wrapper.flex
+                                    .slider_col
+                                        .table_text.text-upper Authorize.Net
+                                    .slider_col
+                                        +selectSuper('', '1.0.0.1', '1.0.0.1' , false)
+                                    .slider_col
+                                        .table_text 3/3/2016 9:56:05 AM
+                                    .slider_col
+                                        .table_text.text-upper Maxim
+                                    .slider_col
+                                        a.table_text.table_text__inline_link(href='' title='Configure') Configure
+                                        a.table_text.table_text__inline_link(href='' title='Test') Test
