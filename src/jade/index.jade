@@ -177,4 +177,28 @@ html(lang='ru')
                     p.place_time 09:00 – 21:00
                     p.place_url http/ссылка на профиль
 
+            section.contacts
+                .contacts_title КОНТАКТЫ
+                p Возникли вопросы? Звоните! Пишите! Вам будут рады!
+                ul.contacts_list.clr
+                    each val, i in [['Участие в мероприятии','Aлена Поскакарина','poskakarina@rcsc.info'],['Участие в мероприятии','Анна Развадовская','razvadovskaya@rcsc.info'],['Участие в качестве спикера','Олег Овчинников','ovchinnikov@rcsc.info'],['PR и СМИ','Анна Дрябина','dryabina@rcsc.info'],['Участие в качестве партнера','Надежда Горбачева','gorbacheva@rcsc.info']]
+                        li.contacts_item
+                            .contacts_img_block
+                                img.contacts_img(src='images/contact_' + (i + 1) + '.png')
+                            .contacts_text_block
+                                p=val[0]
+                                p
+                                    strong #{val[1]}<br>
+                                    a(href='mailto:#{val[2]}') #{val[2]}<br>
+                                    | тел.  +7 (495) 620 45-11
+
+            footer.footer
+                .footer_title Присоединяйтесь к Shopping Center Manager’s Congress
+                form.form
+                    input.input.input__name(type='text' name='name' placeholder='Имя')
+                    input.input.input__email(type='text' name='email' placeholder='Email')
+                    input.input.input__phone(type='text' name='phone' placeholder='Телефон')
+                    buton.btn(type='submit') ПРИНЯТЬ УЧАСТИЕ
+
+
         include includes/blocks/scripts
