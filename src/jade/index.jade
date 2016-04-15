@@ -8,25 +8,21 @@ html(lang='ru')
     body
 
         aside.aside
-            a.logo(href='/')
+            a.logo(href='' data-scroll-link='top')
                 img.logo_img(src='images/logo.png' alt='RCSC - Российский Совет Торговых Центров')
             nav.menu
                 ul.menu_list
-                    each val in ['Концепция мероприятия','Конгресс уже рекомендуют','Программа','Профессиональный каталог управляющих ТЦ','Стоимость','Партнёры','Место проведения','Контакты']
-                        li.menu_item= val
+                    each val, i in ['Концепция мероприятия','Конгресс уже рекомендуют','Программа','Профессиональный каталог управляющих ТЦ','Стоимость','Партнёры','Место проведения','Контакты']
+                        li.menu_item(data-scroll-link=i)= val
 
         .main
-            header.header
+            header.header(data-scroll-section='top')
                 img.header_logo(src='images/header_logo.png' alt='RCSC - Российский Совет Торговых Центров')
                 h1.header_title SHOPPING CENTER MANAGER’s Congress
-                h2.header_subtitle Слоган компании
+                h2.header_subtitle Совершенство менеджмента
                 .header_date <strong>25-26-27</strong> мая <strong>2016</strong>
                 .header_time
-                    each val in [['05','дней'],['10','часов'],['16','минут'],['23','секунд']]
-                        .header_time_block
-                            .header_time_number= val[0]
-                            .header_time_text= val[1]
-                .btn ПРИНЯТЬ УЧАСТИЕ
+                .btn(data-scroll-link='blank') ПРИНЯТЬ УЧАСТИЕ
 
             section.about.clr
                 .about_img_block
@@ -49,13 +45,13 @@ html(lang='ru')
                         Начиная с 2016 года, SHOPPING CENTER MANAGER’s Congress будет проходить
                         ежегодно.
 
-            section.determination
+            section.determination(data-scroll-section='0')
                 .determination_text.
                     <strong>SHOPPING CENTER MANAGER’s Congress</strong> – профессиональная платформа для управляющих торговыми
                     центрами (ТЦ/ТРЦ/ТРК) по вопросам персонального развития, формирования команды, эксплуатации и
                     технического обслуживания объекта, функционирования и развития ТЦ на всех этапах его жизни.
 
-            section.speakers
+            section.speakers(data-scroll-section='1')
                 h3.speakers_title Конгресс уже рекомендуют
                 ul.speakers_list_img.clr
                     - for(var i=1; i<6; i++)
@@ -75,7 +71,7 @@ html(lang='ru')
                                 дальнейшем наша или другая управляющая компания сможет применить полученные знания на практике и
                                 оптимизировать работу своего ТЦ, – значит задача конгресса выполнена».
 
-            section.program.clr
+            section.program.clr(data-scroll-section='2')
                 .program_title Программа Shopping Center Manager’s Congress
                 .program_col
                     .program_day 25 мая, Первый день:
@@ -118,7 +114,7 @@ html(lang='ru')
                         strong 6. Интерактивный неформальный блок
                     p - Командный квест по одному из московских ТЦ
 
-            section.catalog
+            section.catalog(data-scroll-section='3')
                 .catalog_title Каталог управляющих торговыми центрами России
                 p.
                     Первый в своём роде справочник по персоналиям – действующим управляющим торговыми центрами страны,
@@ -127,11 +123,11 @@ html(lang='ru')
                     Содержит данные о профессиональном опыте управляющего и основных характеристиках торгового объекта,
                     команду которого он возглавляет на данный момент.
                 p Также в каталоге представлена информация о компаниях, предлагающих услуги управления ТЦ.
-                p Для того, чтобы попасть в каталог, нужно <span class="link">заполнить анкету</span>
+                p Для того, чтобы попасть в каталог, нужно <span class="link" data-scroll-link="blank">заполнить анкету</span>
                 p Условия размещения объявлений в разделе «Профили компаний» можно узнать, написав на адрес ovchinnikov@rcsc.info
                 p Каталог будет представлен на открывающемся 25 мая в Москве SHOPPING CENTER MANAGER’S CONGRESS.
 
-            section.cost
+            section.cost(data-scroll-section='4')
                 .cost_title СТОИМОСТЬ
                 .cost_table
                     .cost_table_row.clr
@@ -160,16 +156,15 @@ html(lang='ru')
                         .cost_table_col.red 25 000 руб.
                         .cost_table_col.red Скидка 5%
 
-            section.partners
+            section.partners(data-scroll-section='5')
                 .partners_title ПАРТНЕРЫ МЕРОПРИЯТИЯ
                 ul.partners_list.clr
                     - for(var i=1; i<6; i++)
                         li.partners_item
                             img.partners_img(src='images/partner_' + i +'.png')
 
-            section.place.clr
-                .place_map
-                    .place_map_notready Место  уточняется
+            section.place.clr(data-scroll-section='6')
+                #map.place_map.place_map__notready
                 .place_text_block
                     .place_title Место проведения
                     p.place_adress Место проведения уточняется
@@ -177,7 +172,7 @@ html(lang='ru')
                     p.place_time 09:00 – 21:00
                     p.place_url http/ссылка на профиль
 
-            section.contacts
+            section.contacts(data-scroll-section='7')
                 .contacts_title КОНТАКТЫ
                 p Возникли вопросы? Звоните! Пишите! Вам будут рады!
                 ul.contacts_list.clr
@@ -192,13 +187,13 @@ html(lang='ru')
                                     a(href='mailto:#{val[2]}') #{val[2]}<br>
                                     | тел.  +7 (495) 620 45-11
 
-            footer.footer
+            footer.footer(data-scroll-section='blank')
                 .footer_title Присоединяйтесь к Shopping Center Manager’s Congress
-                form.form
-                    input.input.input__name(type='text' name='name' placeholder='Имя')
-                    input.input.input__email(type='text' name='email' placeholder='Email')
-                    input.input.input__phone(type='text' name='phone' placeholder='Телефон')
-                    buton.btn(type='submit') ПРИНЯТЬ УЧАСТИЕ
+                form.form(novalidate)
+                    input.input.input__name(type='text' name='name' placeholder='Имя' data-requied)
+                    input.input.input__email(type='text' name='email' placeholder='Email' data-requied)
+                    input.input.input__phone(type='text' name='phone' placeholder='Телефон' data-requied)
+                    button.btn(type='submit') ПРИНЯТЬ УЧАСТИЕ
 
 
         include includes/blocks/scripts
