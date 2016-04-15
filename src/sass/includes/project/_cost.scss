@@ -1,0 +1,87 @@
+/*
+** COST
+*/
+.cost{
+  padding: 60px 100px;
+  background: url("../images/bg/bg_cost.jpg")no-repeat 50%;
+  background-size: cover;
+  color: #fff;
+}
+
+.cost_title{
+  font-size: 30px;
+  font-family: proximanova_bold, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.cost_table{
+  overflow-y: hidden;
+}
+
+.cost_table_row{
+  &:first-child{
+    .cost_table_col{
+      & + .cost_table_col{
+        position: relative;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 600px;
+          border-left: 1px dashed rgba(255,255,255,0.8);
+        }
+      }
+    }
+  }
+  &:first-child,
+  &:last-child{
+    font-family: proximanova_bold, sans-serif;
+    background: #090909;
+    .cost_table_col{
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(4){
+    background: transparentize(#343434, 0.1);
+  }
+  &:nth-child(3){
+    background: #575757;
+  }
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4){
+    display: flex;
+    .cost_table_col{
+      & + .cost_table_col{
+        margin: auto;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAABw0lEQVQ4T63UOy8EURQH8P+ZKWZp2BHsQyNEpduEGFYQVEqUeirReHwAj0KhwRdQKDSiEAkrYmcSCZ8AFTtEdkUkzGazc2RGLLt7Zx+Y8s49v3Pm3jOH8E/PU7ivQ7btXVnmibo749ph6T/sl5ae9myWTgGEAdxLttRf/3h++2e8AP6slXDDlB34E54Md7eQLZ0B1Co4gatf4y7M8ikYbQL4HWSP/Ap/bdaaMjJ0L1iyMVb/qJ9Ujb8Goo0Zyp4A6BRV/AXndUvKH6mDz7cGy5pXny9fRF1UBs4Q0bg/Ed//inUrT4QitT5WDgFECbhgKz1amOAzuXIMICJIXAS7lbswlAMwBnNBDMOS0sOhxOWbs+bA5FOOGOgSwDYDkw2mvlf4jpIh7ZgYQ0VBhJiF9JizXsNKzAsGaEo14zuiY6RUQJsGYVP4pxJi7vrPr/reaJeCcxdaMoHnfKBp1YxvlxofuVZMBrU5AtYrmjWMGfVB3yq3N6/PU6GeBTCtlK6GZ/2msVEOFk7FVLB3EeBl8R3wopowViuBhbjbegFtFYT5PISqgz3x4gS8oprGUqUV5/2hXkHJoLZBjHf1QV+oFnb2fwD2raX44h9foQAAAABJRU5ErkJggg==")no-repeat 50%;
+        background-size: 23px 19px;
+      }
+    }
+  }
+}
+
+.cost_table_col{
+  float: left;
+  width: 20%;
+  line-height: 1.8;
+  padding: 0.8em 1.2em;
+  &:first-child{
+    width: 40%;
+  }
+  & + .cost_table_col{
+    text-align: center;
+  }
+  &.red{
+    color: #cc1f3c;
+  }
+}
+/*
+** END COST
+*/

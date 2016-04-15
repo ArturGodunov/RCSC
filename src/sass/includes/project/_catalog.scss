@@ -1,0 +1,35 @@
+/*
+** CATALOG
+*/
+.catalog{
+  padding: 60px 200px;
+  text-align: center;
+  color: #0d0d0d;
+  font-size: 21px;
+
+  p{
+    line-height: 1.3;
+    & + p{
+      margin-top: 1.5em;
+    }
+  }
+
+  .link{
+    color: #cc1f3c;
+    border-bottom: 1px solid #cc1f3c;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+      border-color: transparent;
+    }
+  }
+}
+
+.catalog_title{
+  font-size: 30px;
+  font-family: proximanova_bold, sans-serif;
+  margin: 0 0 1.5em;
+}
+/*
+** END CATALOG
+*/
