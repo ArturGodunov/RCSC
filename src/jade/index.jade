@@ -11,6 +11,7 @@ html(lang='ru')
             a.logo(href='' data-scroll-link='top')
                 img.logo_img(src='images/logo.png' alt='RCSC - Российский Совет Торговых Центров')
             nav.menu
+                .menu_hamburger
                 ul.menu_list
                     each val, i in ['Концепция мероприятия','Конгресс уже рекомендуют','Программа','Профессиональный каталог управляющих ТЦ','Стоимость','Партнёры','Место проведения','Контакты']
                         li.menu_item(data-scroll-link=i)= val
@@ -29,7 +30,7 @@ html(lang='ru')
                     - for(var i=1; i<5; i++)
                         img.about_img(src='images/about_' + i +'.jpg')
                 .about_text_block
-                    h4.about_title О МЕРОПРИЯТИИ
+                    h3.text_left О МЕРОПРИЯТИИ
                     .about_term SHOPPING CENTER MANAGER’s Congress 2016 – это:
                     .about_determ.
                         Двухдневная конференция по управлению и развитию команды ТЦ
@@ -52,7 +53,7 @@ html(lang='ru')
                     технического обслуживания объекта, функционирования и развития ТЦ на всех этапах его жизни.
 
             section.speakers(data-scroll-section='1')
-                h3.speakers_title Конгресс уже рекомендуют
+                h3 Конгресс уже рекомендуют
                 ul.speakers_list_img.clr
                     - for(var i=1; i<6; i++)
                         li.speakers_item_img(class= i == 3 ? 'active' : '')
@@ -72,7 +73,7 @@ html(lang='ru')
                                 оптимизировать работу своего ТЦ, – значит задача конгресса выполнена».
 
             section.program.clr(data-scroll-section='2')
-                .program_title Программа Shopping Center Manager’s Congress
+                h3.lg_m_b Программа Shopping Center Manager’s Congress
                 .program_col
                     .program_day 25 мая, Первый день:
                     p
@@ -115,7 +116,7 @@ html(lang='ru')
                     p - Командный квест по одному из московских ТЦ
 
             section.catalog(data-scroll-section='3')
-                .catalog_title Каталог управляющих торговыми центрами России
+                h3.lg_m_b Каталог управляющих торговыми центрами России
                 p.
                     Первый в своём роде справочник по персоналиям – действующим управляющим торговыми центрами страны,
                     витрина лучших менеджерских кадров в сфере торговой недвижимости.
@@ -128,7 +129,7 @@ html(lang='ru')
                 p Каталог будет представлен на открывающемся 25 мая в Москве SHOPPING CENTER MANAGER’S CONGRESS.
 
             section.cost(data-scroll-section='4')
-                .cost_title СТОИМОСТЬ
+                h3.lg_m_b.text_white СТОИМОСТЬ
                 .cost_table
                     .cost_table_row.clr
                         .cost_table_col Что входит в пакет участия
@@ -157,7 +158,7 @@ html(lang='ru')
                         .cost_table_col.red Скидка 5%
 
             section.partners(data-scroll-section='5')
-                .partners_title ПАРТНЕРЫ МЕРОПРИЯТИЯ
+                h3.lg_m_b ПАРТНЕРЫ МЕРОПРИЯТИЯ
                 ul.partners_list.clr
                     - for(var i=1; i<6; i++)
                         li.partners_item
@@ -166,14 +167,14 @@ html(lang='ru')
             section.place.clr(data-scroll-section='6')
                 #map.place_map.place_map__notready
                 .place_text_block
-                    .place_title Место проведения
+                    h3.lg_m_b.text_left Место проведения
                     p.place_adress Место проведения уточняется
                     p.place_date 25-27 мая 2016
                     p.place_time 09:00 – 21:00
                     p.place_url http/ссылка на профиль
 
             section.contacts(data-scroll-section='7')
-                .contacts_title КОНТАКТЫ
+                h3.lg_m_b.text_left КОНТАКТЫ
                 p Возникли вопросы? Звоните! Пишите! Вам будут рады!
                 ul.contacts_list.clr
                     each val, i in [['Участие в мероприятии','Aлена Поскакарина','poskakarina@rcsc.info'],['Участие в мероприятии','Анна Развадовская','razvadovskaya@rcsc.info'],['Участие в качестве спикера','Олег Овчинников','ovchinnikov@rcsc.info'],['PR и СМИ','Анна Дрябина','dryabina@rcsc.info'],['Участие в качестве партнера','Надежда Горбачева','gorbacheva@rcsc.info']]
@@ -188,7 +189,7 @@ html(lang='ru')
                                     | тел.  +7 (495) 620 45-11
 
             footer.footer(data-scroll-section='blank')
-                .footer_title Присоединяйтесь к Shopping Center Manager’s Congress
+                h3.xlg_m_b.text_white Присоединяйтесь к Shopping Center Manager’s Congress
                 form.form(novalidate)
                     input.input.input__name(type='text' name='name' placeholder='Имя' data-requied)
                     input.input.input__email(type='text' name='email' placeholder='Email' data-requied)

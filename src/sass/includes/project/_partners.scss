@@ -3,15 +3,7 @@
 */
 .partners{
   text-align: center;
-  color: #0b0b0b;
-  padding: 60px 0;
-}
-
-.partners_title{
-  font-size: 30px;
-  font-family: proximanova_bold, sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 1.5em;
+  padding: 3.8% 0;
 }
 
 .partners_list{
@@ -28,6 +20,18 @@
 .partners_img{
   display: inline-block;
   max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .partners_item{
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners_item{
+    padding: 0 5px;
+  }
 }
 /*
 ** END PARTNERS

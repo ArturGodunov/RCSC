@@ -3,6 +3,9 @@
 */
 .main{
   margin-left: 316px;
+  @media (max-width: 1024px) {
+    margin-left: 0;
+  }
 }
 /*
 ** END MAIN

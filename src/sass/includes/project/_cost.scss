@@ -2,18 +2,10 @@
 ** COST
 */
 .cost{
-  padding: 60px 100px;
+  padding: 3.8% 6.3%;
   background: url("../images/bg/bg_cost.jpg")no-repeat 50%;
   background-size: cover;
   color: #fff;
-}
-
-.cost_title{
-  font-size: 30px;
-  font-family: proximanova_bold, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 1.5em;
 }
 
 .cost_table{
@@ -31,7 +23,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          height: 600px;
+          height: 1000px;
           border-left: 1px dashed rgba(255,255,255,0.8);
         }
       }
@@ -80,6 +72,42 @@
   }
   &.red{
     color: #cc1f3c;
+  }
+}
+
+@media (max-width: 1600px) {
+  .cost {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .cost_table_col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cost {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .cost_table_col {
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .cost {
+    padding-bottom: 0;
+    font-size: 12px;
   }
 }
 /*

@@ -2,9 +2,8 @@
 ** CATALOG
 */
 .catalog{
-  padding: 60px 200px;
+  padding: 3.8% 12.6%;
   text-align: center;
-  color: #0d0d0d;
   font-size: 21px;
 
   p{
@@ -25,10 +24,25 @@
   }
 }
 
-.catalog_title{
-  font-size: 30px;
-  font-family: proximanova_bold, sans-serif;
-  margin: 0 0 1.5em;
+@media (max-width: 1024px) {
+  .catalog{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog{
+    font-size: 14px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog{
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 }
 /*
 ** END CATALOG

@@ -7,6 +7,7 @@
         scrollToSection();
         countdown();
         validation();
+        mobileMenu();
     });
 
     $(window).scroll(function(){
@@ -43,6 +44,9 @@
     function showSection(section) {
         var reqSection = $('[data-scroll-section]').filter('[data-scroll-section="' + section + '"]'),
             reqSectionPos = reqSection.offset().top + 1;
+        if ($(window).width() < 1024) {
+            reqSectionPos = reqSection.offset().top - 50;
+        }
         $('body, html').animate({scrollTop: reqSectionPos}, 500);
     }
 
@@ -115,6 +119,17 @@
     function validateEmail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
+    }
+
+    function mobileMenu() {
+        $('.menu_hamburger').on('click', function(){
+            $('.menu_list').slideToggle();
+        });
+        if ($(window).width() < 1024) {
+            $('.menu_item').on('click', function(){
+                $(this).parents('.menu_list').hide();
+            });
+        }
     }
 
     /**
